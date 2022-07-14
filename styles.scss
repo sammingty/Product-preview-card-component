@@ -1,0 +1,121 @@
+// Variable overrides first
+$primary: hsl(158, 36%, 37%);
+$card-spacer-y: 1.5rem;
+$card-spacer-x: 1.5rem;
+$card-border-color: none;
+$card-border-radius: 0.75rem;
+$btn-focus-box-shadow: none;
+// Then import Bootstrap
+@import "./node_modules/bootstrap/scss/bootstrap";
+
+.btn-primary {
+    --bs-btn-hover-bg: hsl(157, 59%, 25%);
+}
+
+body {
+    background: hsl(30, 38%, 92%);
+    font-family: 'Montserrat', sans-serif;
+}
+
+.card {
+    width: 90%;
+}
+
+#name, #discount {
+    font-family: 'Fraunces', serif;
+    font-size: 2rem;
+}
+
+#name {
+    color: hsl(212, 21%, 14%);
+}
+
+#category {
+    margin-bottom: 0.5rem;
+}
+
+#description {
+    font-size: 13px;
+    line-height: 175%;
+    margin-bottom: 2.5rem;
+}
+
+#category, #description, #original {
+    color: hsl(232, 4%, 57%);
+}
+
+div.d-flex {
+    margin-bottom: 1rem;
+}
+
+#discount {
+    display: inline-block;
+}
+
+#original {
+    font-size: 13px;
+    text-decoration: line-through;
+    margin-left: 1rem;
+    align-self: center;
+}
+
+#cart {
+    display: block;
+    width: 100%;
+    padding: 0.75rem;
+    border-radius: 0.5rem;
+    font-size: 14px;
+    img {
+        margin-right: 0.5rem;
+    }
+}
+
+p {
+    font-size: 14px;
+}
+
+.productImage {
+    border-radius: 0.75rem 0.75rem 0 0;
+    width: 100%;
+}
+
+.toast-container {
+    top: 0;
+}
+
+@include media-breakpoint-up(sm) {
+    #description {
+        font-size: 14px;
+      margin-bottom: 1rem;
+    }
+  }
+
+@include media-breakpoint-up(md) {
+    .card {
+        max-width: 600px;
+    }
+    .card-body {
+        padding: 1.75rem;
+    }
+    .productImage {
+        border-radius: 0.75rem 0 0 0.75rem;
+        width: 100%; 
+    }
+    #category {
+        margin-bottom: 1rem;
+    }
+    #name {
+        line-height: 1;
+        margin-bottom: 1rem;
+    }
+    #description {
+        margin-bottom: 1.5rem;
+    }
+    div.d-flex {
+        margin-bottom: 1.5rem;
+    }
+    .toast-container {
+        top: auto;
+        bottom: 0;
+    }
+  }
